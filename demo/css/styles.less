@@ -1,5 +1,12 @@
+@import '../../bower_components/lesshat/build/lesshat';
+
+@mainToneColor: #34d088;
+@shadowColor: darken(@mainToneColor, 25%);
+
 body {
   font-size: 80%;
+
+  background-color: lighten(@mainToneColor, 45%);
 }
 
 
@@ -21,3 +28,248 @@ body {
 }
 
 /* Presentations plugin styles */
+.presentation-slides {
+  overflow-y: auto;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &__slide {
+    display: none;
+    max-height: 100%;
+
+    .box-sizing(border-box);
+
+    &_state_active {
+      display: block;
+    }
+  }
+}
+
+
+//custom styles
+.presentation {
+  position: relative;
+  .box-sizing(border-box);
+
+  margin-bottom: 20px;
+
+  color: #fff;
+
+  background-color: darken(@mainToneColor, 10%);
+}
+
+.presentation-progress-bar {
+  overflow: hidden;
+
+  height: 6px;
+
+  background-color: darken(@mainToneColor, 5%);
+
+  &__count {
+    width: 0;
+    height: 6px;
+
+    background-color: darken(@mainToneColor, 25%);
+
+    .transition(width .5s ease-out);
+  }
+}
+
+.presentation__button {
+  //previous && next buttons
+  &_action_previous,
+  &_action_next {
+    position: absolute;
+    top: 0;
+
+    display: block;
+    width: 20px;
+    padding: 10px 20px;
+
+    color: #fff;
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 @shadowColor;
+    text-align: center;
+
+    background-color: darken(@mainToneColor, 10%);
+
+    .transition(all .3s ease-out);
+
+    &:hover,
+    &:focus {
+      background-color: darken(@mainToneColor, 15%);
+
+      outline: none;
+    }
+
+    &_state_disabled{
+      display: none;
+    }
+  }
+
+  &_action_previous {
+    left: -60px;
+    .box-shadow(inset -5px 0 5px 0 fadeout(@shadowColor, 80%));
+  }
+
+  &_action_next {
+    right: -60px;
+    .box-shadow(inset 5px 0 5px 0 fadeout(@shadowColor, 80%));
+  }
+
+  &_action_fullscreen {
+    position: absolute;
+    bottom: 11px;
+    right: 5px;
+
+    padding: 10px 20px;
+    border: none;
+
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    line-height: 18px;
+    text-shadow: 0 1px 0 fadeout(@shadowColor, 50%);
+
+    background-color: rgba(0, 0, 0, 0.28);
+
+    .transition(all .3s ease-out);
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      text-shadow: 0 1px 0 @shadowColor;
+
+      background-color: rgba(0, 0, 0, 0.5);
+
+      outline: none;
+    }
+  }
+}
+
+.presentation-navigation {
+  position: absolute;
+  bottom: 11px;
+  left: 5px;
+  overflow: hidden;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &__item {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.28);
+
+    &_state_active {
+      .presentation-navigation__text {
+        color: #fff;
+
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  &__link,
+  &__text {
+    display: block;
+    padding: 10px 15px;
+
+    font-size: 18px;
+    line-height: 18px;
+
+    text-shadow: 0 1px 0 fadeout(@shadowColor, 50%);
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.75);
+
+    text-decoration: none;
+
+    .transition(all .3s ease-out);
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      text-shadow: 0 1px 0 @shadowColor;
+
+      background-color: rgba(0, 0, 0, 0.5);
+
+      outline: none;
+    }
+  }
+
+  &__text {
+    cursor: default;
+  }
+}
+
+.presentation-slides {
+  height: 500px;
+
+  &__slide {
+    padding: 20px 40px;
+  }
+}
+
+//add styles for fullScreen
+.fullscreen-mode {
+  .presentation {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .presentation-slides {
+    height: 100%;
+
+    &__slide {
+      padding: 60px 80px;
+    }
+  }
+
+  .presentation__button {
+    &_action_previous,
+    &_action_next {
+      top: 5px;
+
+      color: rgba(255, 255, 255, 0.75);
+      text-shadow: 0 1px 0 fadeout(@shadowColor, 50%);
+
+      background-color: rgba(0, 0, 0, 0.28);
+      .box-shadow(none);
+
+      &:hover,
+      &:focus {
+        color: #fff;
+        text-shadow: 0 1px 0 @shadowColor;
+
+        background-color: rgba(0, 0, 0, 0.5);
+
+        outline: none;
+      }
+    }
+
+    &_action_previous {
+      left: 5px;
+    }
+
+    &_action_next {
+      right: 5px;
+    }
+  }
+
+  .presentation-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
