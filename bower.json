@@ -23,6 +23,7 @@
     "jquery": "~1.11.0"
   },
   "devDependencies": {
-    "normalize.css": "~3.0.1"
+    "normalize.css": "~3.0.1",
+    "lesshat": "~2.0.15"
   }
 }
