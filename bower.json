@@ -1,0 +1,28 @@
+{
+  "name": "Presentations.js",
+  "version": "0.0.1",
+  "authors": [
+    "Pavel Grynchenko <psdcoder@gmail.com>"
+  ],
+  "description": "Simple jQuery plugin for create presentations",
+  "main": "lib/presentations.js",
+  "keywords": [
+    "presentation",
+    "jquery"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.0"
+  },
+  "devDependencies": {
+    "normalize.css": "~3.0.1"
+  }
+}
