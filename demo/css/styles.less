@@ -3,12 +3,45 @@
 @mainToneColor: #34d088;
 @shadowColor: darken(@mainToneColor, 25%);
 
+#button {
+  .baseColors (@background: rgba(0, 0, 0, 0.28), @textColor: rgba(255, 255, 255, 0.75)) {
+    color: @textColor;
+    text-shadow: 0 1px 0 @shadowColor;
+
+    background-color: @background;
+
+    .transition(all .3s ease-out);
+  }
+
+  .baseGeometry {
+    display: block;
+    border: none;
+    padding: 10px 20px;
+  }
+
+  .baseText {
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .focus-hover (@background: rgba(0, 0, 0, 0.35), @textColor: #fff) {
+    color: @textColor;
+
+    background-color: @background;
+
+    outline: none;
+  }
+}
+
+/* Main page styles */
+
 body {
   font-size: 80%;
 
   background-color: lighten(@mainToneColor, 45%);
 }
-
 
 .main-container {
   width: 960px;
@@ -27,7 +60,15 @@ body {
 
 }
 
+
 /* Presentations plugin styles */
+.presentation {
+  position: relative;
+  .box-sizing(border-box);
+
+  margin-bottom: 20px;
+}
+
 .presentation-slides {
   overflow-y: auto;
 
@@ -38,10 +79,10 @@ body {
   list-style: none;
 
   &__slide {
+    .box-sizing(border-box);
+
     display: none;
     max-height: 100%;
-
-    .box-sizing(border-box);
 
     &_state_active {
       display: block;
@@ -55,32 +96,65 @@ body {
   height: 0;
   padding: 0;
   margin: 0;
-
   border: none;
+
   .opacity(0);
-}
-
-//custom styles
-.presentation {
-  position: relative;
-  .box-sizing(border-box);
-
-  margin-bottom: 20px;
-
-  color: #fff;
-
-  background-color: darken(@mainToneColor, 10%);
 }
 
 .presentation-progress-bar {
   overflow: hidden;
 
+  &__count {
+    width: 0;
+
+    background-color: darken(@mainToneColor, 25%);
+  }
+}
+
+.presentation__button {
+  &_action_previous,
+  &_action_next {
+    &_state_disabled{
+      display: none;
+    }
+  }
+
+  &_action_fullscreen {
+  }
+}
+
+
+
+
+/* Custom styles */
+//presentation's container
+.presentation {
+  color: #fff;
+
+  background-color: darken(@mainToneColor, 10%);
+}
+
+.presentation-slides {
+  height: 500px;
+
+  &__slide {
+    padding: 20px 40px;
+  }
+}
+
+
+//presentation's progress bar
+.presentation-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
   height: 6px;
 
   background-color: darken(@mainToneColor, 5%);
 
   &__count {
-    width: 0;
     height: 6px;
 
     background-color: darken(@mainToneColor, 25%);
@@ -89,33 +163,22 @@ body {
   }
 }
 
+//presentation's buttons
 .presentation__button {
   //previous && next buttons
   &_action_previous,
   &_action_next {
+    #button > .baseColors(darken(@mainToneColor, 10%), #fff);
+    #button > .baseGeometry;
+    #button > .baseText;
     position: absolute;
     top: 0;
 
-    display: block;
     width: 20px;
-    padding: 10px 20px;
-
-    color: #fff;
-    font-size: 18px;
-    line-height: 18px;
-    text-decoration: none;
-    text-shadow: 0 1px 0 @shadowColor;
-    text-align: center;
-
-    background-color: darken(@mainToneColor, 10%);
-
-    .transition(all .3s ease-out);
 
     &:hover,
     &:focus {
-      background-color: darken(@mainToneColor, 15%);
-
-      outline: none;
+      #button > .focus-hover(darken(@mainToneColor, 15%));
     }
 
     &_state_disabled{
@@ -133,35 +196,24 @@ body {
     .box-shadow(inset 5px 0 5px 0 fadeout(@shadowColor, 80%));
   }
 
+  //fullScreen button
   &_action_fullscreen {
     position: absolute;
     bottom: 11px;
     right: 5px;
 
-    padding: 10px 20px;
-    border: none;
-
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 18px;
-    line-height: 18px;
-    text-shadow: 0 1px 0 fadeout(@shadowColor, 50%);
-
-    background-color: rgba(0, 0, 0, 0.28);
-
-    .transition(all .3s ease-out);
+    #button > .baseColors();
+    #button > .baseGeometry;
+    #button > .baseText;
 
     &:hover,
     &:focus {
-      color: #fff;
-      text-shadow: 0 1px 0 @shadowColor;
-
-      background-color: rgba(0, 0, 0, 0.5);
-
-      outline: none;
+      #button > .focus-hover();
     }
   }
 }
 
+//presentation's navigation
 .presentation-navigation {
   position: absolute;
   bottom: 11px;
@@ -176,13 +228,12 @@ body {
 
   &__item {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.28);
+    #button > .baseColors();
+
 
     &_state_active {
       .presentation-navigation__text {
-        color: #fff;
-
-        background-color: rgba(0, 0, 0, 0.5);
+        #button > .focus-hover();
       }
     }
   }
@@ -192,27 +243,18 @@ body {
     display: block;
     padding: 10px 15px;
 
-    font-size: 18px;
-    line-height: 18px;
-
+    #button > .baseText;
     text-shadow: 0 1px 0 fadeout(@shadowColor, 50%);
   }
 
   &__link {
     color: rgba(255, 255, 255, 0.75);
 
-    text-decoration: none;
-
     .transition(all .3s ease-out);
 
     &:hover,
     &:focus {
-      color: #fff;
-      text-shadow: 0 1px 0 @shadowColor;
-
-      background-color: rgba(0, 0, 0, 0.5);
-
-      outline: none;
+      #button > .focus-hover();
     }
   }
 
@@ -221,15 +263,8 @@ body {
   }
 }
 
-.presentation-slides {
-  height: 500px;
 
-  &__slide {
-    padding: 20px 40px;
-  }
-}
-
-//add styles for fullScreen
+/* FullScreen styles */
 .fullscreen-mode {
   .presentation {
     width: 100%;
@@ -258,12 +293,9 @@ body {
 
       &:hover,
       &:focus {
-        color: #fff;
         text-shadow: 0 1px 0 @shadowColor;
 
         background-color: rgba(0, 0, 0, 0.5);
-
-        outline: none;
       }
     }
 
@@ -274,12 +306,5 @@ body {
     &_action_next {
       right: 5px;
     }
-  }
-
-  .presentation-progress-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
   }
 }
