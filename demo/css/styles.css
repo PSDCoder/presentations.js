@@ -11,12 +11,37 @@
 }
 /* Main page styles */
 body {
-  font-size: 80%;
   background-color: #eefbf5;
 }
 .main-container {
   width: 960px;
   margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #20241e;
+}
+p {
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
+a {
+  color: #394035;
+}
+a:hover,
+a:focus {
+  color: #454e41;
+}
+.main-header {
+  margin-bottom: 40px;
+}
+.main-footer {
+  margin-top: 40px;
 }
 /* Presentations plugin styles */
 .presentation {
@@ -76,6 +101,92 @@ body {
 .presentation-slides__slide {
   padding: 20px 40px;
 }
+.presentation-slides__slide h1,
+.presentation-slides__slide h2,
+.presentation-slides__slide h3,
+.presentation-slides__slide h4,
+.presentation-slides__slide h5,
+.presentation-slides__slide h6 {
+  color: #daf6e9;
+  text-shadow: 0 1px 0 #196c45;
+}
+.presentation-slides__slide p {
+  color: #fff;
+}
+.presentation-slides__slide h1,
+.presentation-slides__slide h2,
+.presentation-slides__slide h3 {
+  line-height: 1.2em;
+}
+.presentation-slides__slide h4,
+.presentation-slides__slide h5,
+.presentation-slides__slide h6 {
+  line-height: 1.3em;
+}
+.presentation-slides__slide p {
+  font-size: 0.9em;
+  line-height: 1.4em;
+}
+.presentation-slides__slide code {
+  display: inline-block;
+  padding: 0 10px;
+  color: #454e41;
+  background-color: #5ddaa0;
+}
+.presentation-slides__slide ul {
+  padding-left: 20px;
+  font-size: 0.9em;
+  line-height: 1.3em;
+  list-style: square;
+}
+.presentation-slides__slide ul li {
+  margin-bottom: 0.3em;
+}
+.presentation-slides__slide table {
+  width: 100%;
+}
+.presentation-slides__slide table th,
+.presentation-slides__slide table td {
+  padding: 5px 10px;
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
+.presentation-slides__slide table th {
+  color: #c5f2dd;
+  border: none;
+}
+.presentation-slides__slide table td {
+  border: 1px solid #229560;
+  color: #454e41;
+  background-color: #5ddaa0;
+}
+.presentation-slides__slide img {
+  max-width: 100%;
+  height: auto;
+}
+.presentation-slides__slide q {
+  display: inline-block;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border-left: 5px solid #5ddaa0;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+.presentation-slides__slide q:before,
+.presentation-slides__slide q:after {
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+.presentation-slides__slide q:before {
+  content: open-quote;
+  margin-right: 0.1em;
+}
+.presentation-slides__slide q:after {
+  content: close-quote;
+  margin-left: 0.1em;
+}
 .presentation-progress-bar {
   position: absolute;
   bottom: 0;
@@ -97,10 +208,10 @@ body {
   color: #ffffff;
   text-shadow: 0 1px 0 #196c45;
   background-color: #27aa6e;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
   display: block;
   border: none;
   padding: 10px 20px;
@@ -143,10 +254,10 @@ body {
   color: rgba(255, 255, 255, 0.75);
   text-shadow: 0 1px 0 #196c45;
   background-color: rgba(0, 0, 0, 0.28);
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
   display: block;
   border: none;
   padding: 10px 20px;
@@ -176,10 +287,10 @@ body {
   color: rgba(255, 255, 255, 0.75);
   text-shadow: 0 1px 0 #196c45;
   background-color: rgba(0, 0, 0, 0.28);
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
 }
 .presentation-navigation__item_state_active .presentation-navigation__text {
   color: #ffffff;

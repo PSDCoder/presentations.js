@@ -1,6 +1,7 @@
 @import '../../bower_components/lesshat/build/lesshat';
 
 @mainToneColor: #34d088;
+@textColor: #20241e;
 @shadowColor: darken(@mainToneColor, 25%);
 
 #button {
@@ -10,7 +11,7 @@
 
     background-color: @background;
 
-    .transition(all .3s ease-out);
+    .transition(color .3s ease-out, background-color .3s ease-out);
   }
 
   .baseGeometry {
@@ -38,8 +39,6 @@
 /* Main page styles */
 
 body {
-  font-size: 80%;
-
   background-color: lighten(@mainToneColor, 45%);
 }
 
@@ -48,18 +47,31 @@ body {
   margin: 0 auto;
 }
 
-.main-header {
-
+h1, h2, h3, h4, h5, h6, p {
+  color: @textColor;
 }
 
-.main-content {
+p {
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
 
+a {
+  color: lighten(@textColor, 10%);
+
+  &:hover,
+  &:focus {
+    color: lighten(@textColor, 15%);
+  }
+}
+
+.main-header {
+  margin-bottom: 40px;
 }
 
 .main-footer {
-
+  margin-top: 40px;
 }
-
 
 /* Presentations plugin styles */
 .presentation {
@@ -139,6 +151,112 @@ body {
 
   &__slide {
     padding: 20px 40px;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: lighten(@mainToneColor, 40%);
+      text-shadow: 0 1px 0 @shadowColor;
+    }
+
+    p {
+      color: #fff;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2em;
+    }
+
+    h4, h5, h6 {
+      line-height: 1.3em;
+    }
+
+    p {
+      font-size: 0.9em;
+      line-height: 1.4em;
+    }
+
+    code {
+      display: inline-block;
+      padding: 0 10px;
+
+      color: lighten(@textColor, 15%);
+
+      background-color: lighten(@mainToneColor, 10%);
+    }
+
+    ul {
+      padding-left: 20px;
+
+      font-size: 0.9em;
+      line-height: 1.3em;
+
+      list-style: square;
+
+      li {
+        margin-bottom: 0.3em;
+      }
+    }
+
+    table {
+      width: 100%;
+
+      th, td {
+        padding: 5px 10px;
+
+        font-size: 0.9em;
+        line-height: 1.3em;
+      }
+
+      th {
+        color: lighten(@mainToneColor, 35%);
+        border: none;
+      }
+
+      td {
+        border: 1px solid darken(@mainToneColor, 15%);
+
+        color: lighten(@textColor, 15%);
+
+        background-color: lighten(@mainToneColor, 10%);
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    q {
+      display: inline-block;
+      margin: 1em 0;
+      padding: 0.5em 1em;
+      border-left: 5px solid lighten(@mainToneColor, 10%);
+
+      font-size: 0.9em;
+      line-height: 1.4em;
+
+      quotes: "\201C""\201D""\2018""\2019";
+
+      &:before,
+      &:after {
+        font-size: 3em;
+        line-height: 0.1em;
+        vertical-align: -0.4em;
+      }
+
+      &:before {
+        content: open-quote;
+
+        margin-right: 0.1em;
+      }
+
+      &:after {
+        content: close-quote;
+
+        margin-left: 0.1em;
+
+
+      }
+    }
   }
 }
 
