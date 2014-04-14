@@ -63,7 +63,6 @@ a:focus {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: none;
-  max-height: 100%;
 }
 .presentation-slides__slide_state_active {
   display: block;
@@ -99,7 +98,7 @@ a:focus {
   height: 500px;
 }
 .presentation-slides__slide {
-  padding: 20px 40px;
+  padding: 20px 40px 50px;
 }
 .presentation-slides__slide h1,
 .presentation-slides__slide h2,
@@ -334,6 +333,7 @@ a:focus {
 }
 .fullscreen-mode .presentation-slides__slide {
   padding: 60px 80px;
+  font-size: 1.5em;
 }
 .fullscreen-mode .presentation__button_action_previous,
 .fullscreen-mode .presentation__button_action_next {

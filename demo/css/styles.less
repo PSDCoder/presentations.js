@@ -94,7 +94,6 @@ a {
     .box-sizing(border-box);
 
     display: none;
-    max-height: 100%;
 
     &_state_active {
       display: block;
@@ -150,7 +149,7 @@ a {
   height: 500px;
 
   &__slide {
-    padding: 20px 40px;
+    padding: 20px 40px 50px;
 
     h1, h2, h3, h4, h5, h6 {
       color: lighten(@mainToneColor, 40%);
@@ -348,7 +347,6 @@ a {
     display: inline-block;
     #button > .baseColors();
 
-
     &_state_active {
       .presentation-navigation__text {
         #button > .focus-hover();
@@ -395,6 +393,8 @@ a {
 
     &__slide {
       padding: 60px 80px;
+
+      font-size: 1.5em;
     }
   }
 
