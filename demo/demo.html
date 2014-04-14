@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Presentations.js demo</title>
     <link rel="stylesheet" href="../bower_components/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="../lib/presentations.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <link rel="stylesheet" href="css/fonts.css"/>
 </head>
@@ -18,195 +19,328 @@
                 <ul class="presentation-slides">
                     <li class="presentation-slides__slide">
                         <h1>
-                            Lorem ipsum dolor sit amet
-                            <br>
-                            consectetur adipiscing
+                            Presentations.js
                         </h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum varius sapien sed semper. Mauris sit amet tempus ipsum. Aenean id sagittis tellus. Vestibulum ac eros ornare, pellentesque elit sit amet, condimentum nulla. Ut sed porttitor urna. Ut id fermentum nibh. Ut elementum elit lorem, quis commodo nulla ultrices ac. Vivamus quis orci et nulla bibendum porttitor. Etiam tristique sapien ac enim vestibulum, vehicula consectetur justo sodales. Aliquam vitae turpis ligula. Phasellus porttitor lacinia nisi at viverra. Proin faucibus eu quam sit amet rutrum. Pellentesque eget neque libero. Mauris in sodales erat.
+                            Presentation.js is simple but powerful presentation jQuery plugin.
                         </p>
-                    </li>
-                    <li class="presentation-slides__slide">
                         <p>
-                            Proin sodales in nisl vel elementum. Pellentesque dictum ante ac faucibus volutpat. Nam nec velit sapien. Vivamus vel felis volutpat, ornare leo id, venenatis elit. Suspendisse nec varius erat. Proin a nibh in neque tincidunt elementum rhoncus sit amet neque. Sed hendrerit arcu ipsum, quis pharetra lacus ultricies sit
-                            <br/>
-                            Proin sodales in nisl vel elementum. Pellentesque dictum ante ac faucibus volutpat. Nam nec velit sapien. Vivamus vel felis volutpat, ornare leo id, venenatis elit. Suspendisse nec varius erat. Proin a nibh in neque tincidunt elementum rhoncus sit amet neque. Sed hendrerit arcu ipsum, quis pharetra lacus ultricies sit
-                            <br/>
-                            Proin sodales in nisl vel elementum. Pellentesque dictum ante ac faucibus volutpat. Nam nec velit sapien. Vivamus vel felis volutpat, ornare leo id, venenatis elit. Suspendisse nec varius erat. Proin a nibh in neque tincidunt elementum rhoncus sit amet neque. Sed hendrerit arcu ipsum, quis pharetra lacus ultricies sit
+                            Main features of plugin:
                         </p>
-                    </li>
-                    <li class="presentation-slides__slide">
-                        <p>
-                            Mauris vitae faucibus nulla. Pellentesque nec euismod tortor. Sed sed faucibus erat. Vivamus mollis fringilla ligula. Aliquam et eleifend nisl, at facilisis neque. Proin quis dapibus tellus. Curabitur posuere erat id est sodales viverra at id nulla. Sed nisl arcu, auctor et egestas in, suscipit ac est. <code>code sample: 5px</code>.
-                        </p>
-                    </li>
-                    <li class="presentation-slides__slide">
-                        <h3>
-                            Sed imperdiet, ligula sit amet hendrerit adipiscing
-                        </h3>
                         <ul>
+                            <li>You can add many presentations to page</li>
+                            <li>Rich configuration object</li>
+                            <li>Simple API</li>
+                            <li>FullScreen mode (Supports only modern browsers. <a href="http://caniuse.com/#feat=fullscreen" target="_blank">More</a>)</li>
                             <li>
-                                ellus lorem gravida lacus, nec pharetra
-                            </li>
-                            <li>
-                                tellus mi ac ipsum
-                            </li>
-                            <li>
-                                Aenean varius convallis lectus feugiat posuere.
-                            </li>
-                            <li>
-                                Nulla faucibus vel lorem id convallis.
+                                Keyboards hotkeys for:
+                                <ul>
+                                    <li>Fullscreen mode (f)</li>
+                                    <li>Flipped slides (&larr; & &rarr;)</li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
                     <li class="presentation-slides__slide">
-                        <h3>
-                            Nullam consectetur eros eu massa consequ
-                        </h3>
+                        <h1>Basic usage:</h1>
+                        <ol>
+                            <li>If you want use pagination functionality - include on page js library file <code>lib/paginator.js</code></li>
+                            <li>Include on page main js library file <code>lib/presentations.js</code></li>
+                            <li>Include basic styles for presentations <code>lib/presentations.css</code></li>
+                            <li>Also you can include beautiful styles for presentations from this demo <code>demo/css/styles.css</code></li>
+                            <li>
+                                Create basic markup for presentation:
+<pre>
+&lt;div class="presentation"&gt;
+    &lt;ul class="presentation-slides"&gt;
+        &lt;li class="presentation-slides__slide"&gt;
+            First slide content
+        &lt;/li&gt;
+        &lt;li class="presentation-slides__slide"&gt;
+            Second slide content
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+                            </li>
+                            <li>
+                                Initialize presentations:
+<pre>
+(function ($, undefined) {
+    $(function () {
+        $('.presentation').presentations({});
+    });
+})(jQuery);
+</pre>
+
+                            </li>
+                            <li>Now you have pretty presentation. You can manage it with <code>$('.presentation').presentations('method'[,'param']);</code></li>
+                        </ol>
+                    </li>
+                    <li class="presentation-slides__slide">
+                        <h1>Plugin API:</h1>
                         <table>
+                            <thead>
+                            <tr>
+                                <th>Method</th>
+                                <th>Description</th>
+                                <th>Call example</th>
+                            </tr>
+                            </thead>
                             <tbody>
-                            <tr>
-                                <th>
-                                    Name
-                                </th>
-                                <th>
-                                    Gender
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Phasellus
-                                </td>
-                                <td>
-                                    male
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Phasellus
-                                </td>
-                                <td>
-                                    female
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>init</td>
+                                    <td></td>
+                                    <td>
+                                        <code>$('.presentation').presentations({});</code>
+                                        <br/>
+                                        <code>$('.presentation').presentations('init', {});</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>destroy</td>
+                                    <td></td>
+                                    <td><code>$('.presentation').presentations('destroy');</code></td>
+                                </tr>
+                                <tr>
+                                    <td>next</td>
+                                    <td></td>
+                                    <td><code>$('.presentation').presentations('next');</code></td>
+                                </tr>
+                                <tr>
+                                    <td>previous</td>
+                                    <td></td>
+                                    <td><code>$('.presentation').presentations('previous');</code></td>
+                                </tr>
+                                <tr>
+                                    <td>setActive</td>
+                                    <td></td>
+                                    <td><code>$('.presentation').presentations('setActive', 10);</code></td>
+                                </tr>
                             </tbody>
                         </table>
                     </li>
                     <li class="presentation-slides__slide">
-                        <h3>
-                            Slide with an image
-                        </h3>
-                        <p>
-                            <img src="http://37.media.tumblr.com/d794bfd843e9a04489d17865a58ac700/tumblr_n3ttuxlKFr1st5lhmo1_1280.jpg">
-                        </p>
+                        <h1>Plugin options:</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Option</th>
+                                    <th>Default value</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>activeSlide</td>
+                                    <td><code>1</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>slideWithKeyboard</td>
+                                    <td><code>true</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>loopMode</td>
+                                    <td><code>false</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>pagination</td>
+                                    <td><code>true</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>paginationOptions</td>
+                                    <td>
+<pre>
+{
+    afterFirst: 1,
+    beforeLast: 1,
+    beforeCurrent: 1,
+    afterCurrent: 1,
+    prevText: 'Prev',
+    nextText: 'Next'
+}
+</pre>
+                                    </td>
+                                    <td>For more information see <a href="https://github.com/PSDCoder/paginator.js">Paginator.js plugin documentation</a></td>
+                                </tr>
+                                <tr>
+                                    <td>progressBar</td>
+                                    <td><code>true</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>arrows</td>
+                                    <td><code>true</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>fullScreen</td>
+                                    <td><code>true</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>fullScreenKey</td>
+                                    <td><code>'f'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>containerClass</td>
+                                    <td><code>'presentation'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>fullScreenClass</td>
+                                    <td><code>'fullscreen-mode'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>nextButtonClass</td>
+                                    <td><code>'presentation__button_action_next'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>nextButtonText</td>
+                                    <td><code>'Next'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>previousButtonClass</td>
+                                    <td><code>'presentation__button_action_previous'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>previousButtonText</td>
+                                    <td><code>'Previous'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>slidesListClass</td>
+                                    <td><code>'presentation-slides'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>slideClass</td>
+                                    <td><code>'presentation-slides__slide'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>activeSlideClass</td>
+                                    <td><code>'presentation-slides__slide_state_active'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>paginationClass</td>
+                                    <td><code>'presentation-navigation'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>paginationItemClass</td>
+                                    <td><code>'presentation-navigation__item'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>progressBarClass</td>
+                                    <td><code>'presentation-progress-bar'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>progressBarCountClass</td>
+                                    <td><code>'presentation-progress-bar__count'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>fullScreenButtonClass</td>
+                                    <td><code>'presentation__button_action_fullscreen'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>fullScreenButtonText</td>
+                                    <td><code>'Fullscreen (f)'</code></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>fullScreenButtonTextEnabled</td>
+                                    <td><code>'Exit from fullscreen (f)'</code></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </li>
                     <li class="presentation-slides__slide">
-                        <q>
-                            Sed convallis dui eu turpis volutpat ultricies quis sit amet quam. Quisque dapibus erat at rutrum luctus. Mauris interdum tincidunt velit, ut iaculis quam dapibus eu. Maecenas quis risus at nisi ornare imperdiet sit amet et arcu. Phasellus ultricies sit amet nisi nec auctor. Vestibulum eu ipsum in risus blandit venenatis. Aliquam ac magna ac risus porta mollis vel at diam.
-                        </q>
+                        <h1>Plugin Events:</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Callback config</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>initEnd</td>
+                                        <td><code>function ($('.presentation')){}</code></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>destroyEnd</td>
+                                        <td><code>function ($('.presentation')){}</code></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>changeSlide</td>
+                                        <td><code>function ($('.presentation'), showIndex){}</code></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>nextSlide</td>
+                                        <td><code>function ($('.presentation'), showIndex){}</code></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>previousSlide</td>
+                                        <td><code>function ($('.presentation'), showIndex){}</code></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>firstSlide</td>
+                                        <td><code>function ($('.presentation'), showIndex){}</code></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>lastSlide</td>
+                                        <td><code>function ($('.presentation'), showIndex){}</code></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>fullScreen</td>
+                                        <td><code>function ($('.presentation')){}</code></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>fullScreenExit</td>
+                                        <td><code>function ($('.presentation')){}</code></td>
+                                        <td></td>
+                                    </tr>
+                            </tbody>
+                        </table>
                     </li>
-                    <li class="presentation-slides__slide">
-                        <q>
-                            Curabitur varius congue mi congue cursus. Morbi eu tortor scelerisque ante consectetur mattis a nec odio. Sed tempor quis mi eget faucibus. Aenean ultricies nulla nec libero tempus commodo. Mauris nec auctor mauris. Suspendisse diam metus, fringilla in congue eu, condimentum quis odio. Morbi ligula neque, molestie ac sem vitae, volutpat tristique magna. Aliquam dapibus, arcu ac lobortis scelerisque, purus nibh feugiat massa, sit amet malesuada libero risus ut justo. Integer vestibulum, massa at suscipit sollicitudin, dui sapien egestas velit, id ultrices sem nisl et metus. Quisque lectus ante, tempus fermentum porta condimentum, egestas ut mi.
-                        </q>
-                    </li>
-                </ul>
-            </div>
-            <div class="presentation">
-                <ul class="presentation-slides">
                     <li class="presentation-slides__slide">
                         <h1>
-                            Lorem ipsum dolor sit amet
-                            <br>
-                            consectetur adipiscing
+                            About Plugin and author
                         </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum varius sapien sed semper. Mauris sit amet tempus ipsum. Aenean id sagittis tellus. Vestibulum ac eros ornare, pellentesque elit sit amet, condimentum nulla. Ut sed porttitor urna. Ut id fermentum nibh. Ut elementum elit lorem, quis commodo nulla ultrices ac. Vivamus quis orci et nulla bibendum porttitor. Etiam tristique sapien ac enim vestibulum, vehicula consectetur justo sodales. Aliquam vitae turpis ligula. Phasellus porttitor lacinia nisi at viverra. Proin faucibus eu quam sit amet rutrum. Pellentesque eget neque libero. Mauris in sodales erat.
-                        </p>
-                    </li>
-                    <li class="presentation-slides__slide">
-                        <p>
-                            Proin sodales in nisl vel elementum. Pellentesque dictum ante ac faucibus volutpat. Nam nec velit sapien. Vivamus vel felis volutpat, ornare leo id, venenatis elit. Suspendisse nec varius erat. Proin a nibh in neque tincidunt elementum rhoncus sit amet neque. Sed hendrerit arcu ipsum, quis pharetra lacus ultricies sit
-                            <br/>
-                            Proin sodales in nisl vel elementum. Pellentesque dictum ante ac faucibus volutpat. Nam nec velit sapien. Vivamus vel felis volutpat, ornare leo id, venenatis elit. Suspendisse nec varius erat. Proin a nibh in neque tincidunt elementum rhoncus sit amet neque. Sed hendrerit arcu ipsum, quis pharetra lacus ultricies sit
-                            <br/>
-                            Proin sodales in nisl vel elementum. Pellentesque dictum ante ac faucibus volutpat. Nam nec velit sapien. Vivamus vel felis volutpat, ornare leo id, venenatis elit. Suspendisse nec varius erat. Proin a nibh in neque tincidunt elementum rhoncus sit amet neque. Sed hendrerit arcu ipsum, quis pharetra lacus ultricies sit
-                        </p>
-                    </li>
-                    <li class="presentation-slides__slide">
-                        <p>
-                            Mauris vitae faucibus nulla. Pellentesque nec euismod tortor. Sed sed faucibus erat. Vivamus mollis fringilla ligula. Aliquam et eleifend nisl, at facilisis neque. Proin quis dapibus tellus. Curabitur posuere erat id est sodales viverra at id nulla. Sed nisl arcu, auctor et egestas in, suscipit ac est. <code>code sample: 5px</code>.
-                        </p>
-                    </li>
-                    <li class="presentation-slides__slide">
-                        <h3>
-                            Sed imperdiet, ligula sit amet hendrerit adipiscing
-                        </h3>
                         <ul>
-                            <li>
-                                ellus lorem gravida lacus, nec pharetra
-                            </li>
-                            <li>
-                                tellus mi ac ipsum
-                            </li>
-                            <li>
-                                Aenean varius convallis lectus feugiat posuere.
-                            </li>
-                            <li>
-                                Nulla faucibus vel lorem id convallis.
-                            </li>
+                            <li>Licence: MIT</li>
+                            <li>Find bug? Create <a href="https://github.com/PSDCoder/presentations.js/issues">issue</a>!</li>
+                            <li>Also you can create <a href="https://github.com/PSDCoder/presentations.js/fork">fork</a> of this project</li>
                         </ul>
-                    </li>
-                    <li class="presentation-slides__slide">
-                        <h3>
-                            Nullam consectetur eros eu massa consequ
-                        </h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <th>
-                                    Name
-                                </th>
-                                <th>
-                                    Gender
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Phasellus
-                                </td>
-                                <td>
-                                    male
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Phasellus
-                                </td>
-                                <td>
-                                    female
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li class="presentation-slides__slide">
-                        <h3>
-                            Slide with an image
-                        </h3>
                         <p>
-                            <img src="http://37.media.tumblr.com/d794bfd843e9a04489d17865a58ac700/tumblr_n3ttuxlKFr1st5lhmo1_1280.jpg">
+                            <b>Author:</b> <a href="https://github.com/PSDCoder">Pavel Grynchenko</a>
                         </p>
-                    </li>
-                    <li class="presentation-slides__slide">
-                        <q>
-                            Sed convallis dui eu turpis volutpat ultricies quis sit amet quam. Quisque dapibus erat at rutrum luctus. Mauris interdum tincidunt velit, ut iaculis quam dapibus eu. Maecenas quis risus at nisi ornare imperdiet sit amet et arcu. Phasellus ultricies sit amet nisi nec auctor. Vestibulum eu ipsum in risus blandit venenatis. Aliquam ac magna ac risus porta mollis vel at diam.
-                        </q>
-                    </li>
-                    <li class="presentation-slides__slide">
-                        <q>
-                            Curabitur varius congue mi congue cursus. Morbi eu tortor scelerisque ante consectetur mattis a nec odio. Sed tempor quis mi eget faucibus. Aenean ultricies nulla nec libero tempus commodo. Mauris nec auctor mauris. Suspendisse diam metus, fringilla in congue eu, condimentum quis odio. Morbi ligula neque, molestie ac sem vitae, volutpat tristique magna. Aliquam dapibus, arcu ac lobortis scelerisque, purus nibh feugiat massa, sit amet malesuada libero risus ut justo. Integer vestibulum, massa at suscipit sollicitudin, dui sapien egestas velit, id ultrices sem nisl et metus. Quisque lectus ante, tempus fermentum porta condimentum, egestas ut mi.
-                        </q>
                     </li>
                 </ul>
             </div>
