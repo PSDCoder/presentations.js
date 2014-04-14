@@ -73,70 +73,6 @@ a {
   margin-top: 40px;
 }
 
-/* Presentations plugin styles */
-.presentation {
-  position: relative;
-  .box-sizing(border-box);
-
-  margin-bottom: 20px;
-}
-
-.presentation-slides {
-  overflow-y: auto;
-
-  width: 100%;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-
-  &__slide {
-    .box-sizing(border-box);
-
-    display: none;
-
-    &_state_active {
-      display: block;
-    }
-  }
-}
-
-.presentation-focused-element {
-  display: block;
-  width: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  border: none;
-
-  .opacity(0);
-}
-
-.presentation-progress-bar {
-  overflow: hidden;
-
-  &__count {
-    width: 0;
-
-    background-color: darken(@mainToneColor, 25%);
-  }
-}
-
-.presentation__button {
-  &_action_previous,
-  &_action_next {
-    &_state_disabled{
-      display: none;
-    }
-  }
-
-  &_action_fullscreen {
-  }
-}
-
-
-
-
 /* Custom styles */
 //presentation's container
 .presentation {
@@ -149,7 +85,7 @@ a {
   height: 500px;
 
   &__slide {
-    padding: 20px 40px 50px;
+    padding: 20px 40px 70px;
 
     h1, h2, h3, h4, h5, h6 {
       color: lighten(@mainToneColor, 40%);
@@ -173,6 +109,15 @@ a {
       line-height: 1.4em;
     }
 
+    a {
+      color: lighten(@mainToneColor, 30%);
+
+      &:hover,
+      &:focus {
+        color: lighten(@mainToneColor, 15%);
+      }
+    }
+
     code {
       display: inline-block;
       padding: 0 10px;
@@ -182,17 +127,29 @@ a {
       background-color: lighten(@mainToneColor, 10%);
     }
 
-    ul {
+    pre {
+      padding: 15px;
+
+      color: lighten(@textColor, 15%);
+
+      background-color: lighten(@mainToneColor, 10%);
+    }
+
+    ul,
+    ol {
       padding-left: 20px;
+      margin: 0.8em 0;
 
       font-size: 0.9em;
       line-height: 1.3em;
 
-      list-style: square;
-
       li {
         margin-bottom: 0.3em;
       }
+    }
+
+    ul {
+      list-style: square;
     }
 
     table {
@@ -203,6 +160,33 @@ a {
 
         font-size: 0.9em;
         line-height: 1.3em;
+        vertical-align: top;
+
+        pre {
+          margin: 0;
+          padding: 5px;
+
+          color: lighten(@mainToneColor, 40%);
+
+          background-color: darken(@mainToneColor, 10%);
+        }
+
+        code {
+          padding: 3px 10px;
+
+          color: lighten(@mainToneColor, 40%);
+
+          background-color: darken(@mainToneColor, 10%);
+        }
+
+        a {
+          color: darken(@mainToneColor, 30%);
+
+          &:hover,
+          &:focus {
+            color: darken(@mainToneColor, 38%);
+          }
+        }
       }
 
       th {

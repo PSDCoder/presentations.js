@@ -43,52 +43,6 @@ a:focus {
 .main-footer {
   margin-top: 40px;
 }
-/* Presentations plugin styles */
-.presentation {
-  position: relative;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-}
-.presentation-slides {
-  overflow-y: auto;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.presentation-slides__slide {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  display: none;
-}
-.presentation-slides__slide_state_active {
-  display: block;
-}
-.presentation-focused-element {
-  display: block;
-  width: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  border: none;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-}
-.presentation-progress-bar {
-  overflow: hidden;
-}
-.presentation-progress-bar__count {
-  width: 0;
-  background-color: #196c45;
-}
-.presentation__button_action_previous_state_disabled,
-.presentation__button_action_next_state_disabled {
-  display: none;
-}
 /* Custom styles */
 .presentation {
   color: #fff;
@@ -98,7 +52,7 @@ a:focus {
   height: 500px;
 }
 .presentation-slides__slide {
-  padding: 20px 40px 50px;
+  padding: 20px 40px 70px;
 }
 .presentation-slides__slide h1,
 .presentation-slides__slide h2,
@@ -126,20 +80,37 @@ a:focus {
   font-size: 0.9em;
   line-height: 1.4em;
 }
+.presentation-slides__slide a {
+  color: #b0edd1;
+}
+.presentation-slides__slide a:hover,
+.presentation-slides__slide a:focus {
+  color: #72deac;
+}
 .presentation-slides__slide code {
   display: inline-block;
   padding: 0 10px;
   color: #454e41;
   background-color: #5ddaa0;
 }
-.presentation-slides__slide ul {
+.presentation-slides__slide pre {
+  padding: 15px;
+  color: #454e41;
+  background-color: #5ddaa0;
+}
+.presentation-slides__slide ul,
+.presentation-slides__slide ol {
   padding-left: 20px;
+  margin: 0.8em 0;
   font-size: 0.9em;
   line-height: 1.3em;
-  list-style: square;
 }
-.presentation-slides__slide ul li {
+.presentation-slides__slide ul li,
+.presentation-slides__slide ol li {
   margin-bottom: 0.3em;
+}
+.presentation-slides__slide ul {
+  list-style: square;
 }
 .presentation-slides__slide table {
   width: 100%;
@@ -149,6 +120,30 @@ a:focus {
   padding: 5px 10px;
   font-size: 0.9em;
   line-height: 1.3em;
+  vertical-align: top;
+}
+.presentation-slides__slide table th pre,
+.presentation-slides__slide table td pre {
+  margin: 0;
+  padding: 5px;
+  color: #daf6e9;
+  background-color: #27aa6e;
+}
+.presentation-slides__slide table th code,
+.presentation-slides__slide table td code {
+  padding: 3px 10px;
+  color: #daf6e9;
+  background-color: #27aa6e;
+}
+.presentation-slides__slide table th a,
+.presentation-slides__slide table td a {
+  color: #145738;
+}
+.presentation-slides__slide table th a:hover,
+.presentation-slides__slide table td a:hover,
+.presentation-slides__slide table th a:focus,
+.presentation-slides__slide table td a:focus {
+  color: #0c3623;
 }
 .presentation-slides__slide table th {
   color: #c5f2dd;

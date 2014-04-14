@@ -1,0 +1,60 @@
+@import '../bower_components/lesshat/build/lesshat';
+
+/* Presentations plugin styles */
+.presentation {
+  position: relative;
+  .box-sizing(border-box);
+
+  margin-bottom: 20px;
+}
+
+.presentation-slides {
+  overflow-y: auto;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &__slide {
+    .box-sizing(border-box);
+
+    display: none;
+
+    &_state_active {
+      display: block;
+    }
+  }
+}
+
+.presentation-focused-element {
+  display: block;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  .opacity(0);
+}
+
+.presentation-progress-bar {
+  overflow: hidden;
+
+  &__count {
+    width: 0;
+  }
+}
+
+.presentation__button {
+  &_action_previous,
+  &_action_next {
+    &_state_disabled{
+      display: none;
+    }
+  }
+
+  &_action_fullscreen {
+  }
+}
