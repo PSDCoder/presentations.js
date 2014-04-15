@@ -90,7 +90,7 @@
                             <tbody>
                                 <tr>
                                     <td>init</td>
-                                    <td></td>
+                                    <td>Initialize plugin. For configure presentation you can pass object with options.</td>
                                     <td>
                                         <code>$('.presentation').presentations({});</code>
                                         <br/>
@@ -99,22 +99,22 @@
                                 </tr>
                                 <tr>
                                     <td>destroy</td>
-                                    <td></td>
+                                    <td>This method will be destroy presentation to state before initialization.</td>
                                     <td><code>$('.presentation').presentations('destroy');</code></td>
                                 </tr>
                                 <tr>
                                     <td>next</td>
-                                    <td></td>
+                                    <td>This method changes the slide to the next.</td>
                                     <td><code>$('.presentation').presentations('next');</code></td>
                                 </tr>
                                 <tr>
                                     <td>previous</td>
-                                    <td></td>
+                                    <td>This method changes the slide to the previous.</td>
                                     <td><code>$('.presentation').presentations('previous');</code></td>
                                 </tr>
                                 <tr>
                                     <td>setActive</td>
-                                    <td></td>
+                                    <td>This method sets N slide as active.</td>
                                     <td><code>$('.presentation').presentations('setActive', 10);</code></td>
                                 </tr>
                             </tbody>
@@ -134,22 +134,22 @@
                                 <tr>
                                     <td>activeSlide</td>
                                     <td><code>1</code></td>
-                                    <td></td>
+                                    <td>Sets N slide as active after initialization plugin.</td>
                                 </tr>
                                 <tr>
                                     <td>slideWithKeyboard</td>
                                     <td><code>true</code></td>
-                                    <td></td>
+                                    <td>Enables switching slides with keyboard (With &larr; & &rarr;).</td>
                                 </tr>
                                 <tr>
                                     <td>loopMode</td>
                                     <td><code>false</code></td>
-                                    <td></td>
+                                    <td>Enables looped mode for switching slides.</td>
                                 </tr>
                                 <tr>
                                     <td>pagination</td>
                                     <td><code>true</code></td>
-                                    <td></td>
+                                    <td>Enables pagination for presentation. See <code>paginationOptions</code> option for setting up pagination.</td>
                                 </tr>
                                 <tr>
                                     <td>paginationOptions</td>
@@ -170,102 +170,102 @@
                                 <tr>
                                     <td>progressBar</td>
                                     <td><code>true</code></td>
-                                    <td></td>
+                                    <td>Enables progress bar for presentation.</td>
                                 </tr>
                                 <tr>
                                     <td>arrows</td>
                                     <td><code>true</code></td>
-                                    <td></td>
+                                    <td>Enables arrows buttons for switching slides.</td>
                                 </tr>
                                 <tr>
                                     <td>fullScreen</td>
                                     <td><code>true</code></td>
-                                    <td></td>
+                                    <td>Enables fullscreen mode for presentation. This feature will be available for user if his browser supports HTML5 fullscreen API.</td>
                                 </tr>
                                 <tr>
                                     <td>fullScreenKey</td>
                                     <td><code>'f'</code></td>
-                                    <td></td>
+                                    <td>Key for switching to fullscreen mode and back.</td>
                                 </tr>
                                 <tr>
                                     <td>containerClass</td>
                                     <td><code>'presentation'</code></td>
-                                    <td></td>
+                                    <td>Plugin will be find presentation container in DOM by this CSS class.</td>
                                 </tr>
                                 <tr>
                                     <td>fullScreenClass</td>
                                     <td><code>'fullscreen-mode'</code></td>
-                                    <td></td>
+                                    <td>This CSS class will be added to <code>body</code> DOM element when presentation will be switched to fullscreen mode.</td>
                                 </tr>
                                 <tr>
                                     <td>nextButtonClass</td>
                                     <td><code>'presentation__button_action_next'</code></td>
-                                    <td></td>
+                                    <td>This CSS class will be added to generated <b>'Next'</b> button</td>
                                 </tr>
                                 <tr>
                                     <td>nextButtonText</td>
                                     <td><code>'Next'</code></td>
-                                    <td></td>
+                                    <td>This text or html will have a generated <b>'Next'</b> button</td>
                                 </tr>
                                 <tr>
                                     <td>previousButtonClass</td>
                                     <td><code>'presentation__button_action_previous'</code></td>
-                                    <td></td>
+                                    <td>This CSS class will be added to generated <b>'Previous'</b> button</td>
                                 </tr>
                                 <tr>
                                     <td>previousButtonText</td>
                                     <td><code>'Previous'</code></td>
-                                    <td></td>
+                                    <td>This text or html will have a generated <b>'Previous'</b> button</td>
                                 </tr>
                                 <tr>
                                     <td>slidesListClass</td>
                                     <td><code>'presentation-slides'</code></td>
-                                    <td></td>
+                                    <td>Plugin will be find container of slides in DOM by this CSS class.</td>
                                 </tr>
                                 <tr>
                                     <td>slideClass</td>
                                     <td><code>'presentation-slides__slide'</code></td>
-                                    <td></td>
+                                    <td>Plugin will be find every slide in slide's container by this CSS class.</td>
                                 </tr>
                                 <tr>
                                     <td>activeSlideClass</td>
                                     <td><code>'presentation-slides__slide_state_active'</code></td>
-                                    <td></td>
+                                    <td>Plugin will add this CSS class to current visible slide.</td>
                                 </tr>
                                 <tr>
                                     <td>paginationClass</td>
                                     <td><code>'presentation-navigation'</code></td>
-                                    <td></td>
+                                    <td>This CSS class will have generated pagination.</td>
                                 </tr>
                                 <tr>
                                     <td>paginationItemClass</td>
                                     <td><code>'presentation-navigation__item'</code></td>
-                                    <td></td>
+                                    <td>This CSS class will have every item of generated pagination.</td>
                                 </tr>
                                 <tr>
                                     <td>progressBarClass</td>
                                     <td><code>'presentation-progress-bar'</code></td>
-                                    <td></td>
+                                    <td>This CSS class will have generated progress bar container.</td>
                                 </tr>
                                 <tr>
                                     <td>progressBarCountClass</td>
                                     <td><code>'presentation-progress-bar__count'</code></td>
-                                    <td></td>
+                                    <td>This CSS class will have generated bar in him container.</td>
                                 </tr>
                                 <tr>
                                     <td>fullScreenButtonClass</td>
                                     <td><code>'presentation__button_action_fullscreen'</code></td>
-                                    <td></td>
+                                    <td>This CSS class will be added to generated <b>'Fullscreen'</b> button</td>
                                 </tr>
                                 <tr>
                                     <td>fullScreenButtonText</td>
                                     <td><code>'Fullscreen (f)'</code></td>
-                                    <td></td>
+                                    <td>This text or html will have a generated <b>'Fullscreen'</b> button in mormal mode</td>
                                 </tr>
                                 <tr>
                                     <td>fullScreenButtonTextEnabled</td>
                                     <td><code>'Exit from fullscreen (f)'</code></td>
-                                    <td></td>
+                                    <td>This text or html will have a generated <b>'Fullscreen'</b> button in fullscreen mode</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -283,48 +283,48 @@
                                 <tbody>
                                     <tr>
                                         <td>initEnd</td>
-                                        <td><code>function ($('.presentation')){}</code></td>
-                                        <td></td>
+                                        <td><code>function ($presentation){}</code></td>
+                                        <td>This event will be fired after initialization presentation.</td>
                                     </tr>
                                     <tr>
                                         <td>destroyEnd</td>
-                                        <td><code>function ($('.presentation')){}</code></td>
-                                        <td></td>
+                                        <td><code>function ($presentation){}</code></td>
+                                        <td>This event will be fired after destroying presentation.</td>
                                     </tr>
                                     <tr>
                                         <td>changeSlide</td>
-                                        <td><code>function ($('.presentation'), showIndex){}</code></td>
-                                        <td></td>
+                                        <td><code>function ($presentation, showIndex){}</code></td>
+                                        <td>This event will be fired when slide was changed.</td>
                                     </tr>
                                     <tr>
                                         <td>nextSlide</td>
-                                        <td><code>function ($('.presentation'), showIndex){}</code></td>
-                                        <td></td>
+                                        <td><code>function ($presentation, showIndex){}</code></td>
+                                        <td>This event will be fired when slide was changed to the next.</td>
                                     </tr>
                                     <tr>
                                         <td>previousSlide</td>
-                                        <td><code>function ($('.presentation'), showIndex){}</code></td>
-                                        <td></td>
+                                        <td><code>function ($presentation, showIndex){}</code></td>
+                                        <td>This event will be fired when slide was changed to the previous.</td>
                                     </tr>
                                     <tr>
                                         <td>firstSlide</td>
-                                        <td><code>function ($('.presentation'), showIndex){}</code></td>
-                                        <td></td>
+                                        <td><code>function ($presentation, showIndex){}</code></td>
+                                        <td>This event will be fired when was selected first slide.</td>
                                     </tr>
                                     <tr>
                                         <td>lastSlide</td>
-                                        <td><code>function ($('.presentation'), showIndex){}</code></td>
-                                        <td></td>
+                                        <td><code>function ($presentation, showIndex){}</code></td>
+                                        <td>This event will be fired when was selected last slide.</td>
                                     </tr>
                                     <tr>
                                         <td>fullScreen</td>
-                                        <td><code>function ($('.presentation')){}</code></td>
-                                        <td></td>
+                                        <td><code>function ($presentation){}</code></td>
+                                        <td>This event will be fired when presentation was switched to fullscreen mode.</td>
                                     </tr>
                                     <tr>
                                         <td>fullScreenExit</td>
-                                        <td><code>function ($('.presentation')){}</code></td>
-                                        <td></td>
+                                        <td><code>function ($presentation){}</code></td>
+                                        <td>This event will be fired when presentation was switched to normal mode from fullscreen.</td>
                                     </tr>
                             </tbody>
                         </table>

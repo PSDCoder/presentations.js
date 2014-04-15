@@ -137,7 +137,6 @@ a:focus {
 }
 .presentation-slides__slide table th code,
 .presentation-slides__slide table td code {
-  padding: 3px 10px;
   color: #daf6e9;
   background-color: #27aa6e;
 }
