@@ -5,7 +5,7 @@ var rename = require('gulp-rename');
 var csso = require('gulp-csso');
 var uglify = require('gulp-uglify');
 
-gulp.task('default', ['js', 'css'], function () {})
+gulp.task('default', ['js', 'css', 'copy'], function () {})
     .task('js', function () {
         return gulp.src(['lib/paginator.js', 'lib/presentations.js'])
             .pipe(jshint())
@@ -23,4 +23,8 @@ gulp.task('default', ['js', 'css'], function () {})
                 path.extname = '.min.css';
             }))
             .pipe(gulp.dest('build/'));
+    })
+    .task('copy', function () {
+        return gulp.src('bower_components/normalize.css/normalize.css')
+            .pipe(gulp.dest('demo/css/'));
     });
