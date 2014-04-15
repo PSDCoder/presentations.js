@@ -15,7 +15,7 @@
             <p>Simple presentations jQuery plugin.</p>
         </header>
         <section class="main-content">
-            <div class="presentation">
+            <div class="presentation presentation-first">
                 <ul class="presentation-slides">
                     <li class="presentation-slides__slide">
                         <h1>
@@ -408,7 +408,15 @@
     <script>
         (function ($, undefined) {
             $(function () {
-                $('.presentation').presentations({
+                $('.presentation-first').presentations({
+                    previousButtonText: '<span class="icon icon-arrow-left"></span>',
+                    nextButtonText: '<span class="icon icon-arrow-right"></span>',
+                    fullScreenButtonText: '<span class="icon icon-fullscreen"></span>',
+                    fullScreenButtonTextEnabled: '<span class="icon icon-fullscreen-exit"></span>',
+                    activeSlide: 3
+                });
+
+                $('.presentation-second').presentations({
                     previousButtonText: '<span class="icon icon-arrow-left"></span>',
                     nextButtonText: '<span class="icon icon-arrow-right"></span>',
                     fullScreenButtonText: '<span class="icon icon-fullscreen"></span>',
