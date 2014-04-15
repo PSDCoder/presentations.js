@@ -1,0 +1,27 @@
+{
+  "name": "Presentations.js",
+  "version": "0.0.1",
+  "description": "Simple jQuery plugin for create presentations",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PSDCoder/presentations.js.git"
+  },
+  "keywords": [
+    "presentation",
+    "jquery"
+  ],
+  "author": "Pavel Grynchenko <psdcoder@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PSDCoder/presentations.js/issues"
+  },
+  "homepage": "https://github.com/PSDCoder/presentations.js",
+  "devDependencies": {
+    "gulp": "~3.6.0",
+    "gulp-jshint": "~1.5.3",
+    "jshint-stylish": "~0.1.5",
+    "gulp-rename": "~1.2.0",
+    "gulp-csso": "~0.2.7",
+    "gulp-uglify": "~0.2.1"
+  }
+}
