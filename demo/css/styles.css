@@ -11,6 +11,7 @@
 }
 /* Main page styles */
 body {
+  font-family: Arial, sans-serif;
   background-color: #eefbf5;
 }
 .main-container {
