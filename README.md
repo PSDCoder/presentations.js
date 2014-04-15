@@ -12,4 +12,4 @@ Main features of plugin:
   + Fullscreen mode (f) 
   + Flipped slides (&larr; & &rarr;)  
 
-All documentation you can see on [demo page]()
+All documentation you can see on [demo page](https://psdcoder.github.io/presentations.js/demo/demo.html)

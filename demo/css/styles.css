@@ -1,3 +1,4 @@
+@import '../../bower_components/normalize.css/normalize.css';
 #button .baseGeometry {
   display: block;
   border: none;
