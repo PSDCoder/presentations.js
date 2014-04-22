@@ -324,20 +324,20 @@ a:focus {
   cursor: default;
 }
 /* FullScreen styles */
-.fullscreen-mode .presentation {
+.body_state_fullscreen .presentation {
   width: 100%;
   height: 100%;
   margin-bottom: 0;
 }
-.fullscreen-mode .presentation-slides {
+.body_state_fullscreen .presentation-slides {
   height: 100%;
 }
-.fullscreen-mode .presentation-slides__slide {
+.body_state_fullscreen .presentation-slides__slide {
   padding: 60px 80px;
   font-size: 1.5em;
 }
-.fullscreen-mode .presentation__button_action_previous,
-.fullscreen-mode .presentation__button_action_next {
+.body_state_fullscreen .presentation__button_action_previous,
+.body_state_fullscreen .presentation__button_action_next {
   top: 5px;
   color: rgba(255, 255, 255, 0.75);
   text-shadow: 0 1px 0 rgba(25, 108, 69, 0.5);
@@ -346,16 +346,16 @@ a:focus {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.fullscreen-mode .presentation__button_action_previous:hover,
-.fullscreen-mode .presentation__button_action_next:hover,
-.fullscreen-mode .presentation__button_action_previous:focus,
-.fullscreen-mode .presentation__button_action_next:focus {
+.body_state_fullscreen .presentation__button_action_previous:hover,
+.body_state_fullscreen .presentation__button_action_next:hover,
+.body_state_fullscreen .presentation__button_action_previous:focus,
+.body_state_fullscreen .presentation__button_action_next:focus {
   text-shadow: 0 1px 0 #196c45;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.fullscreen-mode .presentation__button_action_previous {
+.body_state_fullscreen .presentation__button_action_previous {
   left: 5px;
 }
-.fullscreen-mode .presentation__button_action_next {
+.body_state_fullscreen .presentation__button_action_next {
   right: 5px;
 }
