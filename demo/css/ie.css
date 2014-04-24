@@ -1,0 +1,14 @@
+.presentation-navigation__item {
+  background-color: #196c45;
+}
+.presentation-navigation__item_state_active .presentation-navigation__text {
+  background: #229560;
+}
+.presentation-navigation__link,
+.presentation-navigation__text {
+  color: #fff;
+}
+.presentation-navigation__link:hover {
+  color: #f2f2f2;
+  background-color: #1d7c50;
+}

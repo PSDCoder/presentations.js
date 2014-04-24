@@ -1,0 +1,24 @@
+@import 'vars';
+
+.presentation-navigation {
+  &__item {
+    background-color: darken(@mainToneColor, 25%);
+
+    &_state_active {
+      .presentation-navigation__text {
+        background: darken(@mainToneColor, 15%);
+      }
+    }
+  }
+
+  &__link,
+  &__text {
+    color: #fff;
+  }
+
+  &__link:hover {
+    color: darken(#fff, 5%);
+
+    background-color: darken(@mainToneColor, 21%);
+  }
+}
